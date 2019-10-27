@@ -1,7 +1,9 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: "greet",
-  template: "<h1>Hi there!</h1>"
+  template: "<h1>{{message}}</h1>"
 })
-export class GreetComponent {}
+export class GreetComponent {
+  @Input() message: string = "";
+}
